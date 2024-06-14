@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+  margin: 0%;
+  height: 1000vh;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  position: sticky;
+  top: 0%;
+  height: 75px;
+  width: 100%;
+  background-color: lightseagreen;
+}
+
+img {
+  height: 500px;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
+
+#wrapper {
+  margin: 100px 200px;
+  display: grid;
+
+  grid-template-areas:
+    "aside aside main main main";
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#color-wrapper {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+
+}
+
+.color {
+  height: 40px;
+  width: 70px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#color1 {
+  background-color: #565681;
+}
+
+#color2 {
+  background-color: #8a5362;
+}
+
+#color3 {
+  background-color: #23211f;
+}
+
+#color4 {
+  background-color: #ca3d22;
+}
+
+#color5 {
+  background-color: #e9c7be;
+}
+
+.color:hover, .feature:hover {
+  outline: 2px solid white;
+}
+
+.border {
+  outline: 2px solid white;
+}
+
+#feature-wrapper {
+  display: flex;
+  width: 400px;
+  justify-content: flex-start;
+
+}
+
+.feature {
+  height: 40px;
+  background-color: #aaa;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  margin-right: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+aside {
+  position: relative;
+}
+
+#buy-btn {
+  background-color: darkorange;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  margin: 44px 0px;
+  outline: none;
+  border: none;
+  transition: background-color 300ms;
+}
+
+#buy-btn:hover {
+  background-color: lightseagreen;
+}
+
+#watch-face {
+  background-color: white;
+  height: 200px;
+  width: 175px;
+  position: absolute;
+  top: 143px;
+  left: 158.5px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#watch-face #heart-rate-image {
+  height: 100px;
+  width: 100px;
+  background-image: url("./Assets/heart-rate.png");
+  background-size: contain;
+  z-index: 20;
+  animation: grow-and-shrink 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes grow-and-shrink {
+  0% {}
+
+  40% {
+    transform: scale(0.9);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {}
+}
+
+#watch-face #heart-rate-text {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+#watch-face #date, #watch-face #time {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bolder;
+}
