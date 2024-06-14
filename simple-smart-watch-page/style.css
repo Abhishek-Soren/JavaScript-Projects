@@ -5,7 +5,6 @@
 body {
   background-color: lightblue;
   margin: 0%;
-  height: 1000vh;
   font-family: "Poppins", sans-serif;
 }
 
@@ -15,6 +14,7 @@ nav {
   height: 75px;
   width: 100%;
   background-color: lightseagreen;
+  z-index: 100;
 }
 
 img {
@@ -33,6 +33,7 @@ main {
   margin: 100px 200px;
   display: grid;
 
+  height: 1000vh;
   grid-template-areas:
     "aside aside main main main";
 }
@@ -181,4 +182,16 @@ aside {
   text-align: center;
   font-size: 24px;
   font-weight: bolder;
+}
+
+footer {
+  font-size: 14px;
+  height: 80px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
 }
